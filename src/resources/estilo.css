@@ -1,3 +1,11 @@
 .jfx-spinner .arc{
     -fx-stroke-width: 10px;
 }
+
+.raiz{
+    -fx-background-image: url("logoINDUSTRIAL.png");
+    -fx-background-repeat: stretch;
+    -fx-background-size: 230 230;
+    -fx-background-position:  right top;
+    -fx-effect: dropshadow(three-pass-box, black, 30, 0.5, 0, 0);
+}
