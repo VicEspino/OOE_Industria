@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXSpinner?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="757.0" prefWidth="655.0" stylesheets="@../resources/estilo.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.VentanaPricipalController">
+   <children>
+      <VBox layoutX="14.0" layoutY="18.0" prefHeight="722.0" prefWidth="281.0" spacing="35.0" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="18.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="15.0">
+               <children>
+                  <JFXRadioButton fx:id="rb_horas" selected="true" text="Horas">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="opcion_metrica" />
+                     </toggleGroup>
+                  </JFXRadioButton>
+                  <JFXRadioButton fx:id="rb_minutos" text="Minutos" toggleGroup="$opcion_metrica" />
+                  <JFXRadioButton fx:id="rb_segundos" text="Segundos" toggleGroup="$opcion_metrica" />
+               </children>
+            </HBox>
+            <JFXTextField fx:id="txt_tiempoEstandardFabricacion" labelFloat="true" prefHeight="25.0" prefWidth="187.0" promptText="Tiempo estándard de fabricación" />
+            <JFXTextField fx:id="txt_tiempoPorTurno" labelFloat="true" prefHeight="25.0" prefWidth="187.0" promptText="Tiempo por turno" />
+            <JFXTextField fx:id="txt_tiempoPlaneado" labelFloat="true" prefHeight="25.0" prefWidth="187.0" promptText="Tiempo planeado (comida,reunion..)" />
+            <JFXTextField fx:id="txt_tiempoParadas" labelFloat="true" prefHeight="25.0" prefWidth="187.0" promptText="Tiempo de paradas" />
+            <JFXTextField fx:id="txt_tiempoAislamiento" labelFloat="true" prefHeight="25.0" prefWidth="187.0" promptText="Tiempo de aisllamiento" />
+            <JFXTextField fx:id="txt_tiempoCambios" labelFloat="true" prefHeight="25.0" prefWidth="187.0" promptText="Tiempo de cambios" />
+            <JFXTextField fx:id="txt_tiempoEsperas" labelFloat="true" prefHeight="25.0" prefWidth="187.0" promptText="Tiempo de esperas" />
+            <JFXTextField fx:id="txt_produccionReal" labelFloat="true" prefHeight="25.0" prefWidth="187.0" promptText="Producción real" />
+            <JFXTextField fx:id="txt_numeroUnidadesDefectuosas" labelFloat="true" prefHeight="25.0" prefWidth="187.0" promptText="Número de unidades defectuosas" />
+            <JFXTextField fx:id="txt_numeroUnidadesRemanufacturadas" labelFloat="true" prefHeight="25.0" prefWidth="187.0" promptText="Número de unidades remanufacturadas" />
+         </children>
+      </VBox>
+      <VBox layoutX="323.0" layoutY="102.0" prefHeight="554.0" prefWidth="309.0" spacing="25.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="116.0" prefWidth="352.0" spacing="20.0">
+               <children>
+                  <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label text="Disponibilidad">
+                           <font>
+                              <Font name="Gadugi" size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER_RIGHT" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <JFXSpinner fx:id="spinner_disponibilidad" prefHeight="80.0" prefWidth="80.0" progress="0.0" styleClass="jfx-spinner" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="116.0" prefWidth="352.0" spacing="20.0">
+               <children>
+                  <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label text="Eficiencia">
+                           <font>
+                              <Font name="Gadugi" size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER_RIGHT" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <JFXSpinner fx:id="spinner_eficiencia" prefHeight="80.0" prefWidth="80.0" progress="0.0" styleClass="jfx-spinner" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="116.0" prefWidth="352.0" spacing="20.0">
+               <children>
+                  <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label text="Calidad">
+                           <font>
+                              <Font name="Gadugi" size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER_RIGHT" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <JFXSpinner fx:id="spinner_calidad" prefHeight="80.0" prefWidth="80.0" progress="0.0" styleClass="jfx-spinner" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="116.0" prefWidth="352.0" spacing="20.0">
+               <children>
+                  <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label text="OEE">
+                           <font>
+                              <Font name="Gadugi" size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER_RIGHT" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <JFXSpinner fx:id="spinner_OEE" prefHeight="120.0" prefWidth="120.0" progress="0.0" styleClass="jfx-spinner" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
